@@ -17,6 +17,10 @@ Eventora is a full-stack MERN application that allows users to seamlessly browse
   - Seat availability accurately updates and securely validates against overbooking logic.
 - **Admin Analytics Dashboard**: Track live data such as Pending Requests, Total Revenue, and Total Confirmed Paid Clients directly from the admin panel.
 - **Email Notifications**: Automated email delivery upon successful booking confirmation using Nodemailer.
+- **AI Chatbot Assistant**:
+  - Floating, interactive AI Helper ("Eventora Helper") tailored for freshers & first-time visitors.
+  - Answers project FAQs, registration steps, 2FA OTP details, user vs admin roles, and payment verification.
+  - Queries active database events in real-time and renders interactive event cards directly in chat with direct booking navigation.
 - **Sleek UI/UX**: Built entirely with React, Tailwind CSS, and polished with micro-interactions.
 
 ---

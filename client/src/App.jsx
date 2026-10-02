@@ -9,25 +9,31 @@ import UserDashboard from './pages/UserDashboard';
 import AdminDashboard from './pages/AdminDashboard';
 import PaymentSuccess from './pages/PaymentSuccess';
 import PaymentFailed from './pages/PaymentFailed';
+import Chatbot from './components/Chatbot';
+import BackgroundShader from './components/BackgroundShader';
 
 function App() {
     return (
         <Router>
-            <div className="min-h-screen bg-gray-50 flex flex-col">
-                <Navbar />
-                <main className="flex-grow container mx-auto px-4 sm:px-6 lg:px-8 py-8">
-                    <Routes>
-                        <Route path="/" element={<Home />} />
-                        <Route path="/events/:id" element={<EventDetail />} />
-                        <Route path="/login" element={<Login />} />
-                        <Route path="/register" element={<Register />} />
-                        <Route path="/dashboard" element={<UserDashboard />} />
-                        <Route path="/admin" element={<AdminDashboard />} />
-                        <Route path="/payment-success" element={<PaymentSuccess />} />
-                        <Route path="/payment-failed" element={<PaymentFailed />} />
-                        <Route path="*" element={<h1 className="text-3xl font-bold text-center mt-20">404 - Page Not Found</h1>} />
-                    </Routes>
-                </main>
+            <div className="min-h-screen bg-slate-50 flex flex-col relative text-gray-900 selection:bg-indigo-500 selection:text-white">
+                <BackgroundShader />
+                <div className="relative z-10 flex flex-col min-h-screen">
+                    <Navbar />
+                    <main className="flex-grow container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+                        <Routes>
+                            <Route path="/" element={<Home />} />
+                            <Route path="/events/:id" element={<EventDetail />} />
+                            <Route path="/login" element={<Login />} />
+                            <Route path="/register" element={<Register />} />
+                            <Route path="/dashboard" element={<UserDashboard />} />
+                            <Route path="/admin" element={<AdminDashboard />} />
+                            <Route path="/payment-success" element={<PaymentSuccess />} />
+                            <Route path="/payment-failed" element={<PaymentFailed />} />
+                            <Route path="*" element={<h1 className="text-3xl font-bold text-center mt-20">404 - Page Not Found</h1>} />
+                        </Routes>
+                    </main>
+                    <Chatbot />
+                </div>
             </div>
         </Router>
     );

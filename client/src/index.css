@@ -9,5 +9,95 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #f9fafb;
+  background-color: #f8fafc;
+  overflow-x: hidden;
+}
+
+/* Hide scrollbar for clean chip container */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Shader Mesh Animation Keyframes */
+@keyframes blobFloat1 {
+  0%, 100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  33% {
+    transform: translate(60px, -80px) scale(1.15);
+  }
+  66% {
+    transform: translate(-40px, 40px) scale(0.9);
+  }
+}
+
+@keyframes blobFloat2 {
+  0%, 100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  33% {
+    transform: translate(-70px, 60px) scale(1.2);
+  }
+  66% {
+    transform: translate(50px, -50px) scale(0.95);
+  }
+}
+
+@keyframes blobFloat3 {
+  0%, 100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  50% {
+    transform: translate(40px, 70px) scale(1.1);
+  }
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-blob-1 {
+  animation: blobFloat1 18s infinite ease-in-out;
+}
+
+.animate-blob-2 {
+  animation: blobFloat2 22s infinite ease-in-out;
+}
+
+.animate-blob-3 {
+  animation: blobFloat3 16s infinite ease-in-out;
+}
+
+.animate-gradient-mesh {
+  background-size: 200% 200%;
+  animation: gradientShift 8s ease infinite;
+}
+
+/* Glassmorphism Cards */
+.glass-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.glass-card-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-card-hover:hover {
+  transform: translateY(-6px) scale(1.01);
+  box-shadow: 0 20px 40px -15px rgba(99, 102, 241, 0.15);
 }
